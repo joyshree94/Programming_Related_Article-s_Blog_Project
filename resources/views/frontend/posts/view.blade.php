@@ -56,18 +56,18 @@
                             @endif
                         </div>
                         @empty
-                            <h6 class="class="card card-body shadow-sm mt-3"">no comment yet</h6>
+                            <h6 class="card card-body shadow-sm mt-3">no comment yet</h6>
                         @endforelse
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="border p-2 my-2">
+                    <div class="border p-2 my-2 ad-work">
                         <h4>Advertising Area</h4>
                     </div>
-                    <div class="border p-2 my-2">
+                    <div class="border p-2 my-2 ad-work">
                         <h4>Advertising Area</h4>
                     </div>
-                    <div class="border p-2 my-2">
+                    <div class="border p-2 my-2 ad-work">
                         <h4>Advertising Area</h4>
                     </div>
                     <div class="card mt-3">

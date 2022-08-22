@@ -42,29 +42,11 @@
                $categories= App\Models\Category::where('navbar_status','0')->where('status','0')->get();
              @endphp
 
-             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                JavaScript
-              </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  @foreach ($categories as $item)
-                  @if ($item->id>3 && $item->id<14)
-                <li><a class="dropdown-item {{ Request::is('tutorial/'.$item->slug) ? 'active' :'' }}" href="{{ url('tutorial/'.$item->slug) }}">{{ $item->name }}</a></li>
-                @endif
-                @endforeach
-              </ul>
-            </li> 
             @foreach ($categories as $item)
-            @if ($item->id<10 )
+           
               <li class="nav-item">
                 <a class="nav-link {{ Request::is('tutorial/'.$item->slug) ? 'active' :'' }}" href="{{ url('tutorial/'.$item->slug) }}">{{ $item->name }}</a>
               </li>
-            @endif
-            @if ($item->id>13 )
-              <li class="nav-item">
-                <a class="nav-link {{ Request::is('tutorial/'.$item->slug) ? 'active' :'' }}" href="{{ url('tutorial/'.$item->slug) }}">{{ $item->name }}</a>
-              </li>
-            @endif
              @endforeach
              @if (Auth::check())
              <li class="nav-item logclass">
